@@ -10,7 +10,7 @@
 
 <body class="background-color">
     <div class="container">
-        <form action="#" method="get" class="fundoImc" onsubmit="return enviarFormulario()">
+        <form action="#" method="get" onsubmit="return enviarFormulario()">
             <div class="title">  
                 <h1>Calculadora de IMC</h1>
             </div>
@@ -30,8 +30,10 @@
                     </div>
                     <div class="input-gender">
                         <label for="txtSexo">Sexo: </label>
-                        <input type="radio" id="txtSexo" name="txtSexo" value="Masculino"> Masculino
-                        <input type="radio" id="txtSexo" name="txtSexo" value="Feminino"> Feminino
+                        <div>
+                            <input type="radio" id="txtSexo" name="txtSexo" value="Masculino"> Masculino
+                            <input type="radio" id="txtSexo" name="txtSexo" value="Feminino"> Feminino
+                        </div>
                     </div>
                     <div class="dados">
                         <textarea readonly="true" name="txtDados" id="txtDados" cols="30" rows="10"></textarea>

@@ -1,0 +1,40 @@
+<div class="container">
+    <form action="#" method="get" onsubmit="return enviarFormulario()">
+        <div class="title">  
+            <h1>Calculadora de IMC</h1>
+        </div>
+        <div class="form-header">   
+            
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="txtNome">Nome: </label>
+                    <input type="text" id="txtNome" name="txtNome" [(ngModel)]="nome">
+                    <h2>{{nome}}</h2>
+                </div>
+                <div class="input-box">
+                    <label for="txtPeso">Peso: </label>
+                    <input type="number" id="txtPeso" name="txtPeso"  [(ngModel)]="peso">
+                    <h2>{{peso}}</h2>
+                </div>
+                <div class="input-box">
+                    <label for="txtAltura">Altura: </label>
+                    <input type="number" id="txtAltura" name="txtAltura" step="any" [(ngModel)]="altura">
+                    <h2>{{altura}}</h2>
+                </div>
+                <div class="input-gender">
+                    <label for="txtSexo">Sexo: </label>
+                    <div>
+                        <input type="radio" id="txtSexo" name="txtSexo" value="Masculino"> Masculino
+                        <input type="radio" id="txtSexo" name="txtSexo" value="Feminino"> Feminino
+                    </div>
+                </div>
+                <div class="dados">
+                    <textarea readonly="true" name="txtDados" id="txtDados" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </div> 
+        <div class="buttonimc" (click)="enviarFormulario()">
+            <button>Calcular IMC</button>
+        </div> 
+    </form>
+</div> 
