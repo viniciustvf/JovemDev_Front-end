@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JovemdevTitleComponent implements OnInit {
   
-  public title:string = "Jovem Dev";
+  public title: string = "Jovem Dev";
   
   ngOnInit(): void {
     let h = new Date().getHours();

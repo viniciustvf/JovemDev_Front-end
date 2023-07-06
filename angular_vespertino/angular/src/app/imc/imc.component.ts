@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 
 export class ImcComponent {
 
-  public peso = Number(document.getElementById("txtPeso"));
-  public altura = Number(document.getElementById("txtAltura"));
-  public nome = String(document.getElementById("txtNome"));
-  public sexo = String(document.getElementById("txtSexo"));
-  public avaliacao = Number(this.peso / (this.altura*2));
-
+  public peso!: number;
+  public altura!: number;  
+  public nome!: string; 
+  public sexo!: string; 
+  public avaliacao: number = 0;  
+  public isPesoIdeal: string = ""; 
 
   public calcula(): Number{
     let pes = this.peso;
@@ -23,9 +23,6 @@ export class ImcComponent {
     
     this.avaliacao = pes / (alt * 2);
 
-    if(!this.peso || !this.altura || this.nome || this.sexo){
-      console.log("erro");
-    }
     
     return this.avaliacao;
 
@@ -43,6 +40,14 @@ export class ImcComponent {
       return "https://cdn.pixabay.com/photo/2020/12/27/20/25/smile-5865209_1280.png";
     } else {
       return "https://i.pinimg.com/originals/26/1d/79/261d79eba10658c0dfb9da61c5b28755.png";
+    }
+  }
+
+  public isPesoIdealImc(){
+    if(this.isImcCorrect()){
+      this.isPesoIdeal = "ideal";
+    } else {
+      this.isPesoIdeal = "não ideal";
     }
   }
 

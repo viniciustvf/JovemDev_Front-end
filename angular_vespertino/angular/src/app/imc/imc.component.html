@@ -1,5 +1,7 @@
 <div class="container">
-    <img [src]="urlImgImc()" width="200px">
+    <div class="image">
+        <img [src]="urlImgImc()" width="200px" height="200px">
+    </div>    
     <form>
         <div class="title">
             <h1>Calculadora de IMC</h1>
@@ -28,12 +30,15 @@
                     <h3>{{sexo}}</h3>
                 </div>
             </div>
-            <div class="input-box" style="margin-top: 50px;">
-                <input type="number" readonly id="txtAvaliacao" name="txtAvaliacao" [default]="avaliacao=0" [ngStyle]="{'background-color': isImcCorrect() ? 'green' : 'red'}" [(ngModel)]="avaliacao">
+            <div class="input-box" style="margin-top: 20px;">
+                <input type="number" readonly id="txtAvaliacao" name="txtAvaliacao" class="branca" [class]="" [ngStyle]="{'background-color': isImcCorrect() ? 'green' : 'red'}" [(ngModel)]="avaliacao">
             </div>
         </div>
         <div class="buttonimc" (click)="calcula()">
             <button>Calcular IMC</button>
         </div>
     </form>
+    <div class="image">
+        <img [src]="urlImgImc()" width="200px" height="200px">
+    </div> 
 </div>

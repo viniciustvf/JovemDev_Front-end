@@ -1,0 +1,43 @@
+.linkSelected{
+    font-weight: bold;
+    display: flex;
+}
+
+a:link, a:visited {
+    background-color: #111111;
+    border-radius: 15px;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    width: 230px;
+    left: 0;
+}
+
+a:hover, a:active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.sidenav{
+    background: rgb(18, 26, 1);
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    left: -250px;
+}
+
+
+
+input{
+    position: fixed;
+    top: 30px;
+    left: 300px;
+}
+
+input:checked~.sidenav{
+    left: 0;
+}
