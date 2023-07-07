@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./exemplo-ng-if.component.scss']
 })
 export class ExemploNgIfComponent {
+  
+  gato:boolean = false;
+  cachorro:boolean = false;
+  papagaio:boolean = false;
+  cavalo:boolean = false;
 
+
+  public clickGato(){
+    this.gato = !this.gato;
+  }
+  public clickCachorro(){
+    this.cachorro = !this.cachorro;
+  }
+  public clickPapagaio(){
+    this.papagaio = !this.papagaio;
+  }
+  public clickCavalo(){
+    this.cavalo = !this.cavalo;
+  }
+
+  
 }

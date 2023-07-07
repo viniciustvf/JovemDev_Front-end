@@ -1,0 +1,48 @@
+.gato {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://i0.wp.com/imagensemoldes.com.br/wp-content/uploads/2020/05/Gato-PNG.png?fit=474%2C532&ssl=1');
+    background-size: cover;
+    background-position: center;
+}
+
+.cachorro {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/016/761/881/non_2x/the-dog-smiles-because-he-is-happy-png.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.papagaio {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://png.pngtree.com/png-clipart/20230405/original/pngtree-green-parrot-standing-on-the-branch-png-image_9026319.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.cavalo {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/012/893/814/non_2x/brown-horse-transparent-background-free-png.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+button {
+    background-color: rgb(255, 255, 255);
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.containerPai {
+    display: flex;
+    align-content: space-between;
+}

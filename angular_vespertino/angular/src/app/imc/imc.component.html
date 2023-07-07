@@ -34,8 +34,8 @@
                 <input type="number" readonly id="txtAvaliacao" name="txtAvaliacao" class="branca" [class]="" [ngStyle]="{'background-color': isImcCorrect() ? 'green' : 'red'}" [(ngModel)]="avaliacao">
             </div>
         </div>
-        <div class="buttonimc" (click)="calcula()">
-            <button>Calcular IMC</button>
+        <div class="buttonimc"  (click)="calcula()">
+            <button *ngIf="nome!=''">Calcular IMC</button>
         </div>
     </form>
     <div class="image">

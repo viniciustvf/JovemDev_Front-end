@@ -1,1 +1,17 @@
-<p>exemplo-ng-for works!</p>
+<div class="container">
+    <form>
+        <label for="numeroASomar">Qual número você deseja inserir na lista?</label>
+        <input type="number" id="txtNumber" name="txtNumber" [(ngModel)]="numero">
+    
+    </form>
+</div>
+
+<ul>
+    <li style="margin: 3px;" *ngFor="let numero of listaNumeros">
+    Numero: {{numero.numero}}</li>
+</ul> 
+
+
+<hr/>
+<button (click)="addNumero()">Adiciona Numero</button>
+<button (click)="removeNumero()">Remove Numero</button>

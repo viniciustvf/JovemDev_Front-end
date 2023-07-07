@@ -11,7 +11,7 @@ export class ImcComponent {
   public peso!: number;
   public altura!: number;  
   public nome!: string; 
-  public sexo!: string; 
+  public sexo: string = ""; 
   public avaliacao: number = 0;  
   public isPesoIdeal: string = ""; 
 

@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./exemplo-ng-for.component.scss']
 })
 export class ExemploNgForComponent {
+  
+  numero!: number;
+
+  public listaNumeros: any = [
+
+  ];
+
+  public addNumero(){
+    if(this.numero != 0) {
+      this.listaNumeros.push({numero: this.numero});
+    } 
+  }
+
+  public removeNumero(){
+    this.listaNumeros.pop();
+  }
 
 }
+

@@ -1,1 +1,12 @@
-<p>exemplo-ng-if works!</p>
+
+<div class="containerPai">
+    <div *ngIf="gato" class="gato"></div>
+    <div *ngIf="cachorro" class="cachorro"></div>
+    <div *ngIf="papagaio" class="papagaio"></div>
+    <div *ngIf="cavalo" class="cavalo"></div>
+</div>
+
+<button (click)="clickGato()">Gato</button>
+<button (click)="clickCachorro()">Cachorro</button>
+<button (click)="clickPapagaio()">Papagaio</button>
+<button (click)="clickCavalo()">Cavalo</button>

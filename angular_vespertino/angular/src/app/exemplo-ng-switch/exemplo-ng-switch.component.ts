@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./exemplo-ng-switch.component.scss']
 })
 export class ExemploNgSwitchComponent {
-
+  public valor: number = 1;
 }

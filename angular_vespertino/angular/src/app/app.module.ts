@@ -16,6 +16,7 @@ import { ExemploNgForComponent } from './exemplo-ng-for/exemplo-ng-for.component
 import { ExemploNgSwitchComponent } from './exemplo-ng-switch/exemplo-ng-switch.component';
 import { ExemploNgPipesComponent } from './exemplo-ng-pipes/exemplo-ng-pipes.component';
 import { MenuComponent } from './menu/menu.component';
+import { InvertePipe } from './inverte.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { MenuComponent } from './menu/menu.component';
     ExemploNgForComponent,
     ExemploNgSwitchComponent,
     ExemploNgPipesComponent,
-    MenuComponent
+    ExemploNgStyleComponent,
+    MenuComponent,
+    InvertePipe
   ],
   imports: [
     BrowserModule,
