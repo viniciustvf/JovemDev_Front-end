@@ -2,41 +2,42 @@
     <div class="image">
         <img [src]="urlImgImc()" width="200px" height="200px">
     </div>    
-    <form>
+    <form action="#" method="get" #form="ngForm">
         <div class="title">
             <h1>Calculadora de IMC</h1>
         </div>
         <div class="input-group">
             <div class="input-box">
                 <label for="txtNome">Nome: </label>
-                <input type="text" id="txtNome" name="txtNome" [(ngModel)]="nome">
+                <input type="text" id="txtNome" name="txtNome" [(ngModel)]="nome" required>
                 <h3>{{nome}}</h3>
             </div>
             <div class="input-box">
                 <label for="txtPeso">Peso: </label>
-                <input type="number" id="txtPeso" name="txtPeso" [(ngModel)]="peso">
+                <input type="number" id="txtPeso" name="txtPeso" [(ngModel)]="peso" required>
                 <h3>{{peso}}</h3>
             </div>
             <div class="input-box">
                 <label for="txtAltura">Altura: </label>
-                <input type="number" id="txtAltura" name="txtAltura" step="any" [(ngModel)]="altura">
+                <input type="number" id="txtAltura" name="txtAltura" step="any" [(ngModel)]="altura" required>
                 <h3>{{altura}}</h3>
             </div>
             <div class="input-gender">
                 <label for="txtSexo">Sexo: </label>
                 <div>
-                    <input type="radio" id="txtSexo" name="txtSexo" value="Masculino" [(ngModel)]="sexo"> Masculino
-                    <input type="radio" id="txtSexo" name="txtSexo" value="Feminino" [(ngModel)]="sexo"> Feminino
+                    <input type="radio" id="txtSexo" name="txtSexo" value="Masculino" [(ngModel)]="sexo" required> Masculino
+                    <input type="radio" id="txtSexo" name="txtSexo" value="Feminino" [(ngModel)]="sexo" required> Feminino
                     <h3>{{sexo}}</h3>
                 </div>
             </div>
             <div class="input-box" style="margin-top: 20px;">
-                <input type="number" readonly id="txtAvaliacao" name="txtAvaliacao" class="branca" [class]="" [ngStyle]="{'background-color': isImcCorrect() ? 'green' : 'red'}" [(ngModel)]="avaliacao">
+                <input type="number" readonly id="txtAvaliacao" name="txtAvaliacao" class="branca" [ngStyle]="{'background-color': isImcCorrect() ? 'green' : 'red'}" [(ngModel)]="avaliacao">
+            </div>
+            <div class="buttonimc"  >
+                <button  [disabled]="!form.valid" (click)="calcula()">Calcular IMC</button>
             </div>
         </div>
-        <div class="buttonimc"  (click)="calcula()">
-            <button *ngIf="nome!=''">Calcular IMC</button>
-        </div>
+
     </form>
     <div class="image">
         <img [src]="urlImgImc()" width="200px" height="200px">

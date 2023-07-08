@@ -21,7 +21,7 @@ export class ImcComponent {
     let nome = this.nome;
     let sexo = this.sexo;
     
-    this.avaliacao = pes / (alt * 2);
+    this.avaliacao = pes / (alt)**2;
 
     
     return this.avaliacao;
@@ -49,6 +49,13 @@ export class ImcComponent {
     } else {
       this.isPesoIdeal = "não ideal";
     }
+  }
+
+  public validateFields(): boolean {
+    if(this.altura==0 || this.peso==0 || this.sexo=='' || this.nome=='' || this.peso==null || this.altura==null){
+      return false;
+    }
+    return true;
   }
 
 }

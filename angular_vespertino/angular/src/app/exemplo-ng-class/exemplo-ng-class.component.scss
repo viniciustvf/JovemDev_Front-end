@@ -1,32 +1,49 @@
-.lado1{
-    width: 400px;
-    height: 400px;
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 600px;
+    width: 600px;
+    padding: 100px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+.titulo {
+    position: absolute;
+    top: 50px;
+}
+
+
+.lado1 {
+    width: 100px;
+    height: 100px;
     background-color: #ff0000;
     border: 1px solid #0011ff;
     border-radius: 100%;
 }
 
-.lado2{
-    width: 500px;
-    height: 500px;
+.lado2 {
+    width: 200px;
+    height: 200px;
     background-color: #3700ff;
     border: 1px solid #fbff00;
     border-radius: 5px;
 }
 
-.lado3{
-    width: 600px;
-    height: 600px;
+.lado3 {
+    width: 300px;
+    height: 300px;
     background-color: #fbff00;
     border: 1px solid #000000;
     border-radius: 100%;
 }
 
-.lado4{
-    width: 700px;
-    height: 700px;
+.lado4 {
+    width: 400px;
+    height: 400px;
     background-color: #ff009d;
     border: 1px solid #0004ff;
     border-radius: 5px;
 }
-
