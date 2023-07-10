@@ -8,20 +8,21 @@
 
 .display{
     position: absolute;
-    top: 14px;
-    left: 7%;
-    
-}
-
-.display input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 280px;
     height: 80px;
-    text-align: end;
+    left: 7%;
+    padding: 5px;
     background-color: black;
-    color: yellow;
-    font-family: 'Orbitron';
+    color: rgb(255, 255, 255);
     font-size: 70px;
-    text-align: right;
+    margin-top: -80px;
+}
+
+.time, .intervalo{
+    font-family: 'Orbitron';
 }
 
 .botoes{

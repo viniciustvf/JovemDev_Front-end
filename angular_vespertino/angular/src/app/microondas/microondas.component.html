@@ -3,40 +3,42 @@
 </style>
 <div class="container">
     <div class="display">
-        <input type="text" [(ngModel)]="tempoTotal"  placeholder="00:00"   mask="00:00"  readonly>
+        <div class="time">{{ minutos < 10 ? '0' + minutos : minutos }}</div>
+        <div class="intervalo">:</div>
+        <div class="time">{{ segundos < 10 ? '0' + segundos : segundos }}</div>
     </div>
     <div class="botoes">
         <div class="linha1">
             <div class="botao1">
-                <button (click)="adicionaNumero('0001')">1</button>
+                <button (click)="apertaBotao(1)">1</button>
             </div>
             <div class="botao2">
-                <button (click)="adicionaNumero('0002')">2</button>
+                <button (click)="apertaBotao(2)">2</button>
             </div>
             <div class="botao3">
-                <button (click)="adicionaNumero('0003')">3</button>
+                <button (click)="apertaBotao(3)">3</button>
             </div>
         </div>
         <div class="linha2">
             <div class="botao4">
-                <button (click)="adicionaNumero('0004')">4</button>
+                <button (click)="apertaBotao(4)">4</button>
             </div>
             <div class="botao5">
-                <button (click)="adicionaNumero('0005')">5</button>
+                <button (click)="apertaBotao(5)">5</button>
             </div>
             <div class="botao6">
-                <button (click)="adicionaNumero('0006')">6</button>
+                <button (click)="apertaBotao(6)">6</button>
             </div>
         </div>
         <div class="linha3">
             <div class="botao7">
-                <button (click)="adicionaNumero('0007')">7</button>
+                <button (click)="apertaBotao(7)">7</button>
             </div>
             <div class="botao8">
-                <button (click)="adicionaNumero('0008')">8</button>
+                <button (click)="apertaBotao(8)">8</button>
             </div>
             <div class="botao9">
-                <button (click)="adicionaNumero('0009')">9</button>
+                <button (click)="apertaBotao(9)">9</button>
             </div>
         </div>
         <div class="linha4">
@@ -44,10 +46,10 @@
                 <button>Timer</button>
             </div>
             <div class="botao0">
-                <button (click)="adicionaNumero('0000')">0</button>
+                <button (click)="apertaBotao(0)">0</button>
             </div>
             <div class="botao-min">
-                <button (click)="adicionaMinuto('0100')">1 min</button>
+                <button (click)="apertaBotao(60)">1 min</button>
             </div>
         </div>
         <div class="linha5">
@@ -55,7 +57,7 @@
                 <button>Cancelar</button>
             </div>
             <div class="Ligar/+30s">
-                <button (click)="adicionaMinuto('0030')">Ligar / +30s</button>
+                <button (click)="ligar()">Ligar / +30s</button>
             </div>
         </div>
     </div>

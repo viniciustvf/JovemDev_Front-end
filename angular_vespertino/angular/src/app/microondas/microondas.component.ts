@@ -7,22 +7,67 @@ import { Component } from '@angular/core';
 })
 export class MicroondasComponent {
 
-  public tempoTotal: string = "";
+  // public segundo1: number = 0;
+  // public segundo2: number = 0;
 
-  public adicionaNumero(tempo: string){
-    const tempoNum = Number(tempo);
-    const tempoAtual = Number(this.tempoTotal);
+  // public minuto1: number = 0;
+  // public minuto2: number = 0;
   
-    this.tempoTotal = String(tempoNum + tempoAtual);
+  
+  public minutos: number = 0;
+  public segundos: number = 0;
+  
+  public ligar(){
+    setInterval(() =>{
+      
+      if(this.segundos == 0 && this.minutos == 0){
+        this.segundos = 30;
+      }
+      
+      if(this.segundos > 60){
+        this.minutos = 1;
+      }
+      
+      this.segundos  -= 1;
 
+      if(this.segundos < 0){
+        this.segundos = 60;
+        this.minutos -= 1;
+      }
+
+     }, 1000);
   }
+
   
-  public adicionaMinuto(tempo: string){
+  
+  
+  
+  public apertaBotao(botao: number){
+    if(botao + this.segundos > 60){
+      this.minutos += botao % 60;
+      this.segundos = 0;
+    } else {
+      this.segundos += botao;
+    } 
+    
+    if(botao == 60){
+      this.minutos += 1;
+      this.segundos = 0;
+    } 
+    
     
 
-
   }
+  
 
 
 
+
+
+
+
+  
 }
+  
+  
+
