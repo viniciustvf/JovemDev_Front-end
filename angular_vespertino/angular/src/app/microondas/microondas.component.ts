@@ -7,67 +7,63 @@ import { Component } from '@angular/core';
 })
 export class MicroondasComponent {
 
-  // public segundo1: number = 0;
-  // public segundo2: number = 0;
+  public minutos: any = '';
+  public segundos: any = '';
+  public intervalo!: any;
+  
+  public executando: boolean = false;
 
-  // public minuto1: number = 0;
-  // public minuto2: number = 0;
-  
-  
-  public minutos: number = 0;
-  public segundos: number = 0;
+  public numeros: any = '';
   
   public ligar(){
-    setInterval(() =>{
-      
-      if(this.segundos == 0 && this.minutos == 0){
-        this.segundos = 30;
-      }
+    if(this.segundos == 0 && this.minutos == 0){
+      this.segundos = 30;
+      this.minutos = 0 + '0';
+    }
+    this.intervalo = setInterval(() =>{
+
+      this.executando = true;
+
+
       
       if(this.segundos > 60){
-        this.minutos = 1;
+        this.minutos += 1;
+        this.segundos = this.segundos - 60;
       }
       
       this.segundos  -= 1;
 
       if(this.segundos < 0){
-        this.segundos = 60;
+        this.segundos = 59;
         this.minutos -= 1;
       }
 
      }, 1000);
   }
 
-  
-  
-  
-  
-  public apertaBotao(botao: number){
-    if(botao + this.segundos > 60){
-      this.minutos += botao % 60;
-      this.segundos = 0;
-    } else {
-      this.segundos += botao;
-    } 
-    
-    if(botao == 60){
-      this.minutos += 1;
-      this.segundos = 0;
-    } 
-    
-    
-
+  public cancelar(){
+    clearInterval(this.intervalo);
+    this.minutos = '';
+    this.segundos = '';
   }
   
+  public apertaBotao(botao: string){
+    if (this.segundos.length < 2) {
+      this.segundos += botao;
+    } else {
+      this.minutos += this.segundos;
+      this.segundos = botao;
+    }
+
+
+
+
+  }
 
 
 
 
 
-
-
-  
 }
-  
-  
+
 
