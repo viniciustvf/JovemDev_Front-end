@@ -1,12 +1,27 @@
-<h1>Exemplo ngModel</h1>
-<p>Digite um nome para exibir na lista</p>
-<p>Digite 'X' para ocultar a lista</p>
-
-<input type="text" [(ngModel)]="nome">
-<button (click)="adicionaNome()">ADICIONAR</button>
-<hr>
-<div *ngIf="nome != 'X'">
-    <ul>
-        <li *ngFor="let item of nomes">{{item.nome | uppercase}}</li>
-    </ul>
-</div>
+<div class="container">
+    <div class="titulo">
+        <h1>Calculadora de Juros Simples</h1>
+    </div>
+    <form action="#">
+        <div class="input-box">
+            <label for="txtMeses">N° meses</label>
+            <input type="number" step="any" name="txtMeses" id="txtMeses" [(ngModel)]="meses"> 
+        </div>
+        <div class="input-box">
+            <label for="txtValorTotal">Valor total</label>
+            <input type="text" step="any" name="txtValorTotal" id="txtValorTotal" [(ngModel)]="valorTotal">  
+        </div>
+        <div class="input-box">
+            <label for="txtJuros">Juros ao mês</label>
+            <input type="number" step="any" name="txtJuros" id="txtJuros" [(ngModel)]="juros">
+        </div>
+        <div class="botao">
+            <button (click)="calcula()">Calcular</button>
+        </div>
+        <div class="input-result">
+            <label for="txtValorFinal">Valor final</label>
+            <input type="number" step="any" id="txtValorFinal" name="txtValorFinal" readonly [(ngModel)]="valorFinal">
+        </div>
+    </form>
+</div>     
+        

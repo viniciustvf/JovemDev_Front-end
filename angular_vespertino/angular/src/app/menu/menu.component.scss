@@ -4,14 +4,14 @@
 }
 
 a:link, a:visited {
-    background-color: #111111;
+    background-color: #000000;
     border-radius: 15px;
     color: white;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 10px;
+    margin: 5px;
     width: 230px;
     left: 0;
 }
@@ -29,8 +29,6 @@ a:hover, a:active {
     height: 100vh;
     left: -250px;
 }
-
-
 
 input{
     position: fixed;

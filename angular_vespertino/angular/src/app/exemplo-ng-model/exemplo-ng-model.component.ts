@@ -6,13 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./exemplo-ng-model.component.scss']
 })
 export class ExemploNgModelComponent {
-  public nome: string = "";
-  public nomes: Array<{ nome: string }> = [];
 
-  adicionaNome(){
-    if(this.nome != 'X'){
-      this.nomes.push({nome: this.nome});
-      this.nome = "";
-    }
+  public meses!: number;
+  public valorTotal!: number;
+  public juros!: number;
+  
+  public valorFinal!: number;
+
+  
+  public calcula() {
+    const A = this.valorTotal;
+    const B = this.juros / 100;
+    const C = this.meses;
+  
+    const total = A * B * C;
+  
+    this.valorFinal = A + total;
   }
+
 }

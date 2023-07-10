@@ -1,0 +1,57 @@
+.container{
+    padding: 20px;
+    padding-top: 100px;
+    background-color: rgb(237, 237, 237);
+    position: relative;
+    border-radius: 10px;
+}
+
+.display{
+    position: absolute;
+    top: 14px;
+    left: 7%;
+    
+}
+
+.display input{
+    width: 280px;
+    height: 80px;
+    text-align: end;
+    background-color: black;
+    color: yellow;
+    font-family: 'Orbitron';
+    font-size: 70px;
+    text-align: right;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    bottom: 1px;
+}
+
+.linha1, .linha2, .linha3, .linha4, .linha5 {
+  display: flex;
+  justify-content: center;
+}
+
+.linha5 button{
+    width: 137px;
+}
+
+button{
+    appearance: none;
+    margin: 3px;
+    width: 90px;
+    height: 90px;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+    font-size: larger;
+}
+
+button:hover, button:active {
+    background-color: rgb(237, 237, 237);
+    color: black;
+    cursor: pointer;
+}

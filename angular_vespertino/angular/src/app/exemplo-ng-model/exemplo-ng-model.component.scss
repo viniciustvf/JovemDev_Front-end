@@ -1,0 +1,68 @@
+.container{
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    height: 600px;
+    width: 600px;
+    display: flex;
+}
+
+.titulo{
+    position: absolute;
+    left: 550px;
+}
+
+form{
+    position: absolute;
+    left: 660px;
+    top: 130px;
+}
+
+input{
+    appearance: none;
+    border: none;
+    width: 210px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px;
+}
+
+.input-box{
+    margin-top: 50px;
+    position: relative;
+    height: 20px;
+}
+
+.input-result{
+    margin-top: 130px;
+    position: relative;
+    height: 20px;
+}
+
+label{
+    width: 90%;
+    height: 20px;
+    display: inline-block;
+}
+
+.botao{
+    position: relative;
+    top: 90px;
+    left: 9%;
+}
+
+button{
+    width: 50%;
+    height: 30px;
+    border-radius: 20px;
+    margin: none;
+    font-size: 110%;
+    background-color: white;
+    box-shadow: 1px 1px 6px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}

@@ -6,18 +6,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./exemplo-ng-style.component.scss']
 })
 export class ExemploNgStyleComponent {
-  
-  public largura : number = 100;
-  public larguraStr : string = "100px"
 
-  aumenta(){
-    this.largura += 50;
-    this.larguraStr = this.largura+"px";
+  public respostaInput!: number;
+  public resposta!: number;
+
+
+
+
+  public isCorrectAnswer(): boolean {
+    if(this.resposta == 4){
+      return true;
+    }
+    return false;
   }
 
-  diminui(){
-    this.largura -= 50;
-    this.larguraStr = this.largura+"px";
+  public enviarResposta(){
+    this.resposta = this.respostaInput;
+    this.respostaInput!;
+  }
+
+  public validateFields(){
+    if(this.resposta == undefined){
+      return true;
+    }
+    return false;
   }
 
 }
