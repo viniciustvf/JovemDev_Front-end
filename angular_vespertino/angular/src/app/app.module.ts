@@ -19,6 +19,7 @@ import { InvertePipe } from './inverte.pipe';
 import { MicroondasComponent } from './microondas/microondas.component';
 import { ExemploNgModelComponent } from './exemplo-ng-model/exemplo-ng-model.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { TempoPipe } from './tempo.pipe';
 
 
 
@@ -37,7 +38,8 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     ExemploNgStyleComponent,
     MenuComponent,
     InvertePipe,
-    MicroondasComponent
+    MicroondasComponent,
+    TempoPipe
   ],
   imports: [
     BrowserModule,

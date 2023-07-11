@@ -1,8 +1,8 @@
 <div class="container">
     <div class="display">
-        <input type="text" value="{{minutos}} : {{segundos}}" placeholder="00:00" mask="00:00"  readonly>
+        <input type="text" maxlength="4" placeholder="00:00" value="{{numeros | tempo}}" readonly>
     </div>
-    <div class="botoes">
+    <div class="botoes"> 
         <div class="linha1">
             <div class="botao1">
                 <button (click)="apertaBotao('1')">1</button>

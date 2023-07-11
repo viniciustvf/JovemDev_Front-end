@@ -7,63 +7,97 @@ import { Component } from '@angular/core';
 })
 export class MicroondasComponent {
 
-  public minutos: any = '';
-  public segundos: any = '';
-  public intervalo!: any;
-  
-  public executando: boolean = false;
-
   public numeros: any = '';
   
+  public minutos: any = '';
+  public segundos: any = '';
+ 
+  public intervalo!: any;
+  public executando: boolean = false;
+
+  
+  
   public ligar(){
-    if(this.segundos == 0 && this.minutos == 0){
-      this.segundos = 30;
-      this.minutos = 0 + '0';
-    }
+
     this.intervalo = setInterval(() =>{
 
       this.executando = true;
 
-
-      
-      if(this.segundos > 60){
-        this.minutos += 1;
-        this.segundos = this.segundos - 60;
+      this.minutos = this.numeros.substring(0, 2);
+      this.segundos = this.numeros.substring(2, 4);
+  
+      let segundosNum = Number(this.segundos);
+      let minutosNum = Number(this.minutos);
+  
+      if(segundosNum == 0 && minutosNum == 0){
+        segundosNum += 30;
       }
       
-      this.segundos  -= 1;
-
-      if(this.segundos < 0){
-        this.segundos = 59;
-        this.minutos -= 1;
+      if (segundosNum > 59) {
+        minutosNum += Math.floor(segundosNum / 60);
+        segundosNum %= 60;
       }
+      
+      if (segundosNum < 1) {
+        minutosNum -= 1;
+        segundosNum = 60;
+      }
+  
+      this.minutos = minutosNum.toString().padStart(2, '0');
+      this.segundos = segundosNum.toString().padStart(2, '0');
+  
+      this.numeros = this.minutos + (this.segundos - 1);
+
+      if (minutosNum < 0 || segundosNum < 0) {
+        clearInterval(this.intervalo);
+      }
+
 
      }, 1000);
   }
 
   public cancelar(){
     clearInterval(this.intervalo);
-    this.minutos = '';
-    this.segundos = '';
+    this.numeros = '';
   }
   
+  atualizaTempo(){
+    if (this.numeros.length > 4) {
+      this.numeros = this.numeros.slice(-4);
+    }
+  }
+
   public apertaBotao(botao: string){
-    if (this.segundos.length < 2) {
-      this.segundos += botao;
-    } else {
-      this.minutos += this.segundos;
-      this.segundos = botao;
+      if(this.executando == true){
+        this.segundos = (Number(this.segundos) + Number(botao)).toString().padStart(2, '0');
+        this.numeros = this.minutos + this.segundos;
+      } else {
+        this.numeros += botao;
+        this.atualizaTempo();
+      } 
+    }
+
+    public formataTempo(tempo: number): number{
+      if (tempo < 10) {
+        return Number('0' + tempo);
+      }
+      return tempo;
     }
 
 
 
 
+
+
+
+
+
   }
 
 
 
 
 
-}
+
 
 
