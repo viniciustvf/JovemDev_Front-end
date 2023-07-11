@@ -10,6 +10,10 @@ import { ExemploNgForComponent } from './exemplo-ng-for/exemplo-ng-for.component
 import { ExemploNgSwitchComponent } from './exemplo-ng-switch/exemplo-ng-switch.component';
 import { ExemploNgPipesComponent } from './exemplo-ng-pipes/exemplo-ng-pipes.component';
 import { MicroondasComponent } from './microondas/microondas.component';
+import { CpPaiComponent } from './md-pai-filho/cp-pai/cp-pai.component';
+import { CpPaiComponent as CpPaiComponent2} from './md-filho-pai/cp-pai/cp-pai.component';
+import { CpAgrupadorComponent } from './md-service/cp-agrupador/cp-agrupador.component';
+import { CpTelaComponent } from './md-atividade/cp-tela/cp-tela.component';
 
 const routes: Routes = [
   { path: "bindings", component: ExemploBindingComponent},
@@ -22,7 +26,11 @@ const routes: Routes = [
   { path: "ngswitch", component: ExemploNgSwitchComponent},
   { path: "ngfor", component: ExemploNgForComponent},
   { path: "pipes", component: ExemploNgPipesComponent},
-  { path: "microondas", component: MicroondasComponent}
+  { path: "microondas", component: MicroondasComponent},
+  { path: "pai_filho", component: CpPaiComponent},
+  { path: "filho_pai", component: CpPaiComponent2},
+  { path: "service", component: CpAgrupadorComponent},
+  { path: "atividade", component: CpTelaComponent}
 
 ];
 

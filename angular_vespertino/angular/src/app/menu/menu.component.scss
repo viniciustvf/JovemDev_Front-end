@@ -28,6 +28,7 @@ a:hover, a:active {
     width: 250px;
     height: 100vh;
     left: -250px;
+    overflow-y: scroll;
 }
 
 input{
@@ -45,4 +46,6 @@ input:not(:checked)~.sidenav{
     left: -250px;
     transition: 0.9s;
 }
+
+
 

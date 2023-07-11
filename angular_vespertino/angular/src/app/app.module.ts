@@ -20,6 +20,10 @@ import { MicroondasComponent } from './microondas/microondas.component';
 import { ExemploNgModelComponent } from './exemplo-ng-model/exemplo-ng-model.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { TempoPipe } from './tempo.pipe';
+import { MdPaiFilhoModule } from './md-pai-filho/md-pai-filho.module';
+import { MdFilhoPaiModule } from './md-filho-pai/md-filho-pai.module';
+import { MdServiceModule } from './md-service/md-service.module';
+import { MdAtividadeModule } from './md-atividade/md-atividade.module';
 
 
 
@@ -39,7 +43,7 @@ import { TempoPipe } from './tempo.pipe';
     MenuComponent,
     InvertePipe,
     MicroondasComponent,
-    TempoPipe
+    TempoPipe,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,11 @@ import { TempoPipe } from './tempo.pipe';
     FormsModule,
     CommonModule,
     NgxMaskDirective, 
-    NgxMaskPipe
+    NgxMaskPipe,
+    MdPaiFilhoModule,
+    MdFilhoPaiModule,
+    MdServiceModule,
+    MdAtividadeModule
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent]

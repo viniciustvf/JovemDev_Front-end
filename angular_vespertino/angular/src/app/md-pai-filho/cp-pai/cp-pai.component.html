@@ -1,0 +1,14 @@
+<div class="marca">
+    <p>Marca:</p>
+    <input [(ngModel)]="carro.marca">
+</div>
+<div class="ano">
+    <p>Ano:</p>
+    <input [(ngModel)]="carro.ano" type="number">
+</div>
+<div class="marca">
+    <p>Cor:</p>
+    <input [(ngModel)]="carro.cor">
+</div>
+
+<app-cp-filho [carroFilho]="carro"></app-cp-filho>
