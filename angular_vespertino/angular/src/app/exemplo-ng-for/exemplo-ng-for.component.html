@@ -1,17 +1,21 @@
 <div class="container">
+    <div class="titulo">
+        <h3>Exemplo NG FOR</h3>
+    </div>
     <form>
         <label for="numeroASomar">Qual número você deseja inserir na lista?</label>
-        <input type="number" id="txtNumber" name="txtNumber" [(ngModel)]="numero">
-    
     </form>
+    <div class="input-box">
+        <input type="number" id="txtNumber" name="txtNumber" [(ngModel)]="numero">
+    </div>
+    <ul>
+        <li style="margin: 3px;" *ngFor="let numero of listaNumeros">
+        Número: {{numero.numero}}</li>
+    </ul>
+    <div class="botoes">
+        <button (click)="addNumero()" [disabled]="numero == undefined">Adiciona Número</button>
+        <button (click)="removeNumero()">Remove Número</button>
+    </div>    
 </div>
+ 
 
-<ul>
-    <li style="margin: 3px;" *ngFor="let numero of listaNumeros">
-    Numero: {{numero.numero}}</li>
-</ul> 
-
-
-<hr/>
-<button (click)="addNumero()">Adiciona Numero</button>
-<button (click)="removeNumero()">Remove Numero</button>

@@ -46,3 +46,13 @@ button {
     display: flex;
     align-content: space-between;
 }
+
+.titulo{
+    position: fixed;
+    top: 50px;
+    font-size: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    left: 580px;
+}

@@ -1,13 +1,25 @@
-<h1>Exemplo ngSwitch</h1>
-
-<input type="number"[(ngModel)]="valor">
-<div [ngSwitch]="valor">
-  <p *ngSwitchCase="1"> Domingo</p>
-  <p *ngSwitchCase="2"> Segunda feira</p>
-  <p *ngSwitchCase="3"> Terça feira</p>
-  <p *ngSwitchCase="4"> Quarta feira</p>
-  <p *ngSwitchCase="5"> Quinta feira</p>
-  <p *ngSwitchCase="6"> Sexta feira</p>
-  <p *ngSwitchCase="7"> Sábado</p>
-  <p *ngSwitchDefault> Não representa um dia de semana</p>
-</div>
+<div class="container">
+  <div class="titulo">
+    <h1>Exemplo NG SWITCH</h1>
+  </div>
+  <div class="titulo2">
+    <h3>Escolha um número de 1 a 10 para somar com 5</h3>
+  </div>
+  <div class="input-box">
+    <input type="number"[(ngModel)]="valor">
+  </div>
+  <div [ngSwitch]="valor">
+    <p *ngSwitchCase="1"> Resultado: 6</p>
+    <p *ngSwitchCase="2"> Resultado: 7</p>
+    <p *ngSwitchCase="3"> Resultado: 8</p>
+    <p *ngSwitchCase="4"> Resultado: 9</p>
+    <p *ngSwitchCase="5"> Resultado: 10</p>
+    <p *ngSwitchCase="6"> Resultado: 11</p>
+    <p *ngSwitchCase="7"> Resultado: 12</p>
+    <p *ngSwitchCase="8"> Resultado: 13</p>
+    <p *ngSwitchCase="9"> Resultado: 14</p>
+    <p *ngSwitchCase="10"> Resultado: 15</p>
+    <p *ngSwitchDefault> Escolha um número de 1 a 10.</p>
+  </div>
+</div>  
+  

@@ -14,7 +14,7 @@ export class ExemploNgForComponent {
   ];
 
   public addNumero(){
-    if(this.numero != 0) {
+    if(this.numero != 0 && this.listaNumeros.length < 10) {
       this.listaNumeros.push({numero: this.numero});
     } 
   }

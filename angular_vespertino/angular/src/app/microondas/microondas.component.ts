@@ -42,6 +42,12 @@ export class MicroondasComponent {
         minutosNum -= 1;
         segundosNum = 60;
       }
+      
+      if (minutosNum > 99) {
+        clearInterval(this.intervalo);
+        minutosNum = 0;
+        segundosNum = 1;
+      }
   
       this.minutos = minutosNum.toString().padStart(2, '0');
       this.segundos = segundosNum.toString().padStart(2, '0');
@@ -77,12 +83,6 @@ export class MicroondasComponent {
       } 
     }
 
-    public formataTempo(tempo: number): number{
-      if (tempo < 10) {
-        return Number('0' + tempo);
-      }
-      return tempo;
-    }
 
 
 
