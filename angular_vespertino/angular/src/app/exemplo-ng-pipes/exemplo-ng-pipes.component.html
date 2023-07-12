@@ -1,24 +1,38 @@
-<h1>Exemplo-Pipes</h1>
-
-<h3>Pipe para data </h3>
-<p>SEM: {{data}}</p>
-<p>COM: {{data | date:'dd-MM-yyyy'}}</p>
-<hr>
-
-<h3>Pipe para Texto </h3>
-<p>Normal: {{nome}}</p>
-<p>Maiúscula: {{nome | uppercase}}</p>
-<p>Minúscula: {{nome | lowercase}}</p>
-<hr>
-
-<h3>Pipe para Valor </h3>
-<p>Normal: {{valor}}</p>
-<p>Real: {{valor | currency : 'BRL'}}</p>
-<p>Para formatar decimais é necessário configurar LOCALE em app.module.ts</p>
-<hr>
-
-<h3>Pipe própria (inverter uma string)</h3>
-<p>Criar a pipe <b><i>'ng generate pipe inverte' </i></b></p>
-<input type="text" [(ngModel)]="palavra">
-<div class="container"><p class="destaque">{{palavra | inverte}}</p></div>
-<hr>
+<div class="container">
+    <div class="titulo">
+        <h1>Exemplo PIPES</h1>
+    </div>
+    <div class="data">
+        <h3>Pipe para data </h3>
+        <p>SEM: {{data}}</p>
+        <p>COM: {{data | date:'dd-MM-yyyy'}}</p>
+        <hr>
+    </div>
+    <div class="texto">
+        <h3>Pipe para Texto </h3>
+        <p>Normal: {{nome}}</p>
+        <p>Maiúscula: {{nome | uppercase}}</p>
+        <p>Minúscula: {{nome | lowercase}}</p>
+        <hr>
+    </div>
+    <div class="valor">
+        <h3>Pipe para Valor </h3>
+        <p>Normal: {{valor}}</p>
+        <p>Real: {{valor | currency : 'BRL'}}</p>
+        <p>Para formatar decimais é necessário configurar LOCALE em app.module.ts</p>
+        <hr>
+    </div>
+    <div class="inverte">
+        <h3>Pipe própria (inverter uma string)</h3>
+        <p>Criar a pipe <b><i>'ng generate pipe inverte' </i></b></p>
+        <input type="text" [(ngModel)]="palavra">
+        <div class="inverte"><p class="destaque">{{palavra | inverte}}</p></div>
+        <hr>
+    </div>
+    <div class="cpf">
+        <h3>Pipe própria (CPF)</h3>
+        <input type="text" [(ngModel)]="cpf">
+        <div class="cpf">{{cpf | cpf}}</div>
+        <hr>
+    </div>
+</div>    

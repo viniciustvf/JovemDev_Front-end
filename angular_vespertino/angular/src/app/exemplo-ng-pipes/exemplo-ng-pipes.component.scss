@@ -1,10 +1,29 @@
-.destaque {
-    font-size: 36px;
-    font-weight: bold;
-    background-color: yellow;
+.container{
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
 }
 
-.container {
+h3{
+    margin-top: 30px;
+}
+
+input{
+    appearance: none;
+    border: none;
+    width: 150px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px;
+    margin-bottom: 5px;
+}
+
+.titulo{
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }

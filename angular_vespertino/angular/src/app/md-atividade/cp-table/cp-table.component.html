@@ -4,7 +4,7 @@
         <hr>
     </div>     
     <div class="tabela">
-        <p *ngFor="let l of medicamentos" (click)="medSelecionado(l)">Medicamento: {{l.nome}}  Valor: ${{l.valor}}</p>
+        <p *ngFor="let l of medicamentos" (click)="medSelecionado(l)">Medicamento: {{l.nome}}  Valor: ${{l.valor | currency : 'BRL'}}</p>
     </div>    
 </div>    
     

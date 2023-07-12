@@ -31,12 +31,6 @@ a:hover, a:active {
     overflow-y: scroll;
 }
 
-input{
-    position: fixed;
-    top: 20px;
-    left: 270px;
-}
-
 input:checked~.sidenav{
     left: 0;
     transition: 0.9s;
@@ -47,5 +41,48 @@ input:not(:checked)~.sidenav{
     transition: 0.9s;
 }
 
+input[type="checkbox"] {
+    position: fixed;
+    top: 20px;
+    left: 250px;
+    width: 50px;
+    height: 50px;
+    appearance: none;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #000000;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 999;
+}
 
+input[type="checkbox"]::before,
+input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: 0.5s;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+input[type="checkbox"]::before {
+    left: 16px;
+}
+
+input[type="checkbox"]::after {
+    left: 16px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #000000;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: rotate(45deg) translateY(-50%);
+}
+
+input[type="checkbox"]:checked::after {
+    transform: rotate(-45deg) translateY(-50%);
+}

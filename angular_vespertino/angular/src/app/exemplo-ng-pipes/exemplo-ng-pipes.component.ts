@@ -10,6 +10,7 @@ export class ExemploNgPipesComponent {
   public nome: string = "Fulano de Tal";
   public valor: number = 12345.67;
   public palavra: string = "";
+  public cpf: string = "";
 }
 
 
