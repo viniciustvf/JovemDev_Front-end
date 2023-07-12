@@ -14,23 +14,25 @@ export class CpFormComponent {
   
   public medicamento = {
     nome: '',
-    valor: undefined,
+    valor: 0,
   }
-  
-  public qt:number = 0;
   
   constructor(private service: ServiceService){}
   
   public addItem(){
     const med: Medicamento = new Medicamento(this.nome, this.valor);
+    this.nome = '';
+    this.valor = 0;
     return this.service.adiciona(med);
   }
 
   ngOnInit(): void {
     this.service.emitEvent.subscribe({
-      next: (res: number) => this.qt = res,
-      error: (err: number) => this.qt = 0
-    })
+      next: (res: Medicamento) => {
+        this.nome = res.nome;
+        this.valor = res.valor;
+      }
+    });
   }
 
 }

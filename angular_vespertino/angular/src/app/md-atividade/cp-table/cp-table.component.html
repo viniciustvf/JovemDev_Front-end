@@ -1,2 +1,10 @@
-<p>cp-table works!</p>
-<p *ngFor="let l of medicamentos">Medicamento: {{l.nome}} {{l.valor}}</p>
+<div class="container">
+    <div class="titulo">
+        <p>Medicamentos</p>
+        <hr>
+    </div>     
+    <div class="tabela">
+        <p *ngFor="let l of medicamentos" (click)="medSelecionado(l)">Medicamento: {{l.nome}}  Valor: ${{l.valor}}</p>
+    </div>    
+</div>    
+    

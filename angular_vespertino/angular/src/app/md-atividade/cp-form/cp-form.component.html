@@ -2,14 +2,14 @@
     <form action="">
         <div class="input-box">
             <label for="txtNome">Nome</label>
-            <input type="text" id="txtNome" [(ngModel)]="nome">
+            <input type="text" id="txtNome" name="txtNome" [(ngModel)]="nome">
         </div>
         <div class="input-box">
             <label for="txtValor">Valor</label>
-            <input type="number" id="txtValor" [(ngModel)]="valor">
+            <input type="number" id="txtValor" name="txtValor" [(ngModel)]="valor">
         </div>
         <div class="botao">
-            <button (click)="addItem()">Cadastrar</button>
+            <button (click)="addItem()" [disabled]="nome == undefined || valor == undefined || valor == 0 || nome == ''">Cadastrar</button>
         </div>
     </form>
 </div>

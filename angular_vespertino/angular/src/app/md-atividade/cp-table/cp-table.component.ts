@@ -13,6 +13,10 @@ export class CpTableComponent {
   
   constructor(private service: ServiceService){}
   
+  public medSelecionado(med: Medicamento){
+    this.service.medSelecionado(med);
+  }
+  
   ngOnInit(): void {
     this.medicamentos = this.service.getMedicamentos();
   }
