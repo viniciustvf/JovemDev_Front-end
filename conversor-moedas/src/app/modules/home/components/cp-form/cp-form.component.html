@@ -1,0 +1,9 @@
+<div class="container">
+    <form action="" #form="ngForm">
+        <div class="input-box">
+            <p>Valor R$</p>
+            <input type="number" id="txtValor" name="txtValor" [(ngModel)]="valor" (keyup.enter)="converteMoeda()">
+        </div>
+    </form>
+</div>
+<cp-table [moeda]="moeda"></cp-table>

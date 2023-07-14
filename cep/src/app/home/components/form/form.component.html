@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="titulo">
+        <H1>Consulta CEP</H1>
+    </div>
+    <form action="">
+        <div class="input-box">
+            <label for="txtCep">CEP</label>
+            <input type="text" id="txtCep" name="txtCep" [(ngModel)]="cep">
+            <button (click)="buscarEndereco()">Buscar</button>
+        </div>
+    </form>
+</div>
+<app-table [endereco]="endereco"></app-table>
+

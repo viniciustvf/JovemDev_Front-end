@@ -1,0 +1,23 @@
+.container{
+    position: relative;
+    display: flex;
+    padding: 30px;
+    background-color: #35bb3b;
+    border-radius: 20px;
+    height: 280px;
+    width: 600px;
+    left: 400px;
+    margin-top: 5%;
+    flex-direction: column;
+}
+
+.label{
+    display: flex;
+    gap: 60px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+}
