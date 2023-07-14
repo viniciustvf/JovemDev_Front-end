@@ -24,6 +24,5 @@ export class ServiceService {
 
   public adiciona(medicamento: Medicamento){
     this.medicamentos.push(medicamento);
-    this.emitEvent.emit(this.medicamentos.length);
   }
 }
