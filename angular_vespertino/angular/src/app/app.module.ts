@@ -25,6 +25,7 @@ import { MdFilhoPaiModule } from './md-filho-pai/md-filho-pai.module';
 import { MdServiceModule } from './md-service/md-service.module';
 import { MdAtividadeModule } from './md-atividade/md-atividade.module';
 import { CpfPipe } from './cpf.pipe';
+import { TreinoComponent } from './treino/treino.component';
 
 
 
@@ -46,6 +47,7 @@ import { CpfPipe } from './cpf.pipe';
     MicroondasComponent,
     TempoPipe,
     CpfPipe,
+    TreinoComponent,
   ],
   imports: [
     BrowserModule,

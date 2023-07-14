@@ -14,6 +14,7 @@ import { CpPaiComponent } from './md-pai-filho/cp-pai/cp-pai.component';
 import { CpPaiComponent as CpPaiComponent2} from './md-filho-pai/cp-pai/cp-pai.component';
 import { CpAgrupadorComponent } from './md-service/cp-agrupador/cp-agrupador.component';
 import { CpTelaComponent } from './md-atividade/cp-tela/cp-tela.component';
+import { TreinoComponent } from './treino/treino.component';
 
 const routes: Routes = [
   { path: "bindings", component: ExemploBindingComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: "pai_filho", component: CpPaiComponent},
   { path: "filho_pai", component: CpPaiComponent2},
   { path: "service", component: CpAgrupadorComponent},
-  { path: "atividade", component: CpTelaComponent}
+  { path: "atividade", component: CpTelaComponent},
+  { path: "treino", component: TreinoComponent}
 
 ];
 
