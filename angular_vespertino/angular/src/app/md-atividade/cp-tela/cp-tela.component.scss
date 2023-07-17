@@ -1,0 +1,21 @@
+main{
+    padding: 90px;
+    background-color: white;
+    border-radius: 20px;
+    height: 600px;
+    width: 800px;
+}
+
+.titulo{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    top: 100px;
+    left: 600px;
+}
+
+.titulo img{
+    position: absolute;
+    left: 480px;
+}
+
